@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background-color: #050505;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== LOGO (IMG) ===== */
+body > img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    /* NEON ROXO */
+    filter: 
+        drop-shadow(0 0 6px #9b4dff)
+        drop-shadow(0 0 14px #9b4dff)
+        drop-shadow(0 0 30px #9b4dff);
+}
+
+/* ===== TITULO ===== */
+h2 {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(24px, 5vw, 42px);
+}
+
+/* ===== INPUTS CONTAINER ===== */
+div {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+}
+
+/* ===== INPUTS ===== */
+input {
+    flex: 1;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== BOTÃO ===== */
+button {
+    width: 100%;
+    max-width: 320px;
+    height: 48px;
+    background: #9b4dff;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+
+    box-shadow: 0 0 12px rgba(155, 77, 255, 0.6);
+}
+
+button:hover {
+    background: #8a3df0;
+    box-shadow: 0 0 22px rgba(155, 77, 255, 0.9);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===== TELAS MAIORES ===== */
+@media (min-width: 768px) {
+    body > img {
+        max-width: 260px;
+    }
+
+    div,
+    button {
+        max-width: 360px;
+    }
+}
