@@ -21,6 +21,15 @@ function generateNumber() {
 
 const result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-alert (result);
+const resultDiv = document.getElementById("result");
+
+resultDiv.textContent = result;
+resultDiv.classList.remove("hidden");
+
+// reinicia a animação sempre que clicar
+resultDiv.classList.remove("animate");
+void resultDiv.offsetWidth;
+resultDiv.classList.add("animate");
+
 
 }

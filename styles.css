@@ -33,6 +33,7 @@ body > img {
 
 
 h2 {
+   
     color: #fff;
     font-weight: 700;
     text-align: center;
@@ -41,6 +42,7 @@ h2 {
 
 
 div {
+   
     display: inline-grid;
     gap: 10px;
     width: 100%;
@@ -66,6 +68,7 @@ input::placeholder {
 }
 
 button {
+    
     width: 100%;
     max-width: 320px;
     height: 48px;
@@ -81,6 +84,61 @@ button {
     box-shadow: 0 0 12px rgba(155, 77, 255, 0.6);
 }
 
+.result {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 320px;
+    height: 66px;
+    background: rgba(155, 77, 255, 0.15);
+    border: 2px solid #9b4dff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+
+    box-shadow: 0 0 25px rgba(155, 77, 255, 0.9);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ANIMAÇÃO DE EXPLOSÃO / PULSO */
+@keyframes explosion {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* EFEITO DE PISCAR */
+@keyframes flash {
+    0%, 100% {
+        box-shadow: 0 0 25px rgba(155, 77, 255, 0.9);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+    }
+}
+
+.animate {
+    animation: explosion 0.6s ease-out, flash 1s ease-in-out;
+}
+
+
+
+
+
 button:hover {
     background: #8a3df0;
     box-shadow: 0 0 22px rgba(155, 77, 255, 0.9);
@@ -90,9 +148,20 @@ button:active {
     transform: scale(0.97);
 }
 
-@media (min-width: 768px) {
+
+@media (min-width: 876px) {
     body > img {
-        max-width: 260px;
+        max-width: 889px;
+    }
+
+    div,
+    button {
+        max-width: 340px;
+    }
+}
+@media (min-width: 860px) {
+    body > img {
+        max-width: 270px;
     }
 
     div,
