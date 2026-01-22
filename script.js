@@ -2,7 +2,7 @@
 
 /* math --> MATEMATICA  
 pow (2,2) / potencia (2,2);  // 4 / 4
-sqrt (16) / raizCuadrada (16);  // 4 / 4
+sqrt (16) / raizquadrada (16);  // 4 / 4
 abs (-5) / valorAbsoluto (-5);  // 5 / 5    
 PI / PI;  // 3.141592653589793 / 3.141592653589793  
 ceil (4.3) / techo (4.3);  // 5 / 5
